@@ -1,0 +1,19 @@
+======================IN FILE======================
+file = open('output.txt', 'a', encoding = 'utf-8') # 'w'
+file.writelines("2350816	Phạm Anh Kiệt	19\n")
+file.writelines("23520782	Nguyen Trong Khoi	19\n")
+file.writelines("23521111	Phan Thi Kim Loan	18\n")
+file.close()
+
+
+=====================OUT FILE=====================
+def file(path1, path2):
+	file1 = open(path1, 'r', encoding = 'utf-8')
+	file2 = open(path2, 'w', encoding = 'utf-8')
+	for line in file1:
+		data = line.strip()
+		file2.writelines(data)
+		file2.writelines('\n')
+	file1.close()
+	file2.close()
+file('input.txt', 'output.txt')

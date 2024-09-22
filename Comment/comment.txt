@@ -1,0 +1,2 @@
+Chú thích 1 dòng : #
+Chú thích nhiều dòng : ''' ... ''' hoặc """ ... """

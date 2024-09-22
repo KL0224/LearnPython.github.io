@@ -1,0 +1,248 @@
+==========================FUNCTION========================
+1. Hàm : giải quyết các nhiệm vụ nhỏ của chương trình và có thể sử dụng lại hàm.
+2. Cú pháp: 
+def function_name(parameter):
+	#code
+3. Chạy các hàm:
+if __name__ == '__main__':
+	#code
+4. Keyword argument: gán các tham số bằng các giá trị, do đó ko cần theo thứ tự cũng được.
+def In(x, y, z):
+	print(x, y, z)
+if __name__ == '__main__':
+	In(1, 2, 3) # Positional argument
+	In(x = 10, z = 30, y = 20) # Keyword argument
+5. Default argument:
+def In4(name, age = 18):
+	print(name, age)
+if __name__ == '__main__':
+	In4('kiet', 19)
+	In4('loan')
+6. Trả về nhiều giá trị:
+def nhanchia(a, b):
+	nhan = a * b
+	chia = a / b
+	return nhan, chia
+if __name__ == '__main__':
+	a, b = map(int, input().split())
+	n, c = nhanchia(a, b)
+	print(nhanchia(a, b))
+	print(n, c)
+. Code:
+def sumchange(a, b):
+	a = a + 20
+	b = b + 20
+	return a + b
+def hello():
+	print("I love you")
+if __name__ == '__main__':
+	a, b = map(int, input().split())
+	print(sumchange(a, b))
+	print(a + b)
+	hello()
+*******Code*******
+from math import *
+#Hàm kiểm tra số nguyên tố:
+def CheckSNT(n):
+	if n < 2:
+		return 0
+	for i in range(2, isqrt(n) + 1):
+		if n % i == 0:
+			return 0
+	return 1
+
+#In ra tổng chứ số của n:
+def SumChuSo(n):
+	s = 0
+	while n != 0:
+		s += n % 10
+		n //= 10
+	return s
+
+#In ra tổng chữ số chẵn của n:
+def SumChuSoChan(n):
+	s = 0
+	while n != 0:
+		if n % 10 % 2 == 0:
+			s += n % 10
+		n //= 10
+	return s 
+
+#In ra tổng chữ số nguyên tố của n:
+def SumChuSoNT(n):
+	s = 0
+	while n != 0:
+		if CheckSNT(n % 10): # n % 10 == 2 or 3 or 5 or 7
+			s += n % 10
+		n //= 10
+	return s 
+
+#In số lật ngược:
+def SoNguoc(n):
+	nguoc = 0
+	while n != 0:
+		nguoc = nguoc * 10 + n % 10
+		n //= 10
+	return nguoc 
+
+#Số lượng thừa số nguyên tố của n:
+def SLTSNT(n):
+	cnt = 0
+	for i in range(2, isqrt(n) + 1):
+		if n % i == 0:
+			cnt += 1
+			while n % i == 0:
+				n //= i
+	if n > 1:
+		cnt += 1
+	return cnt
+#In ra thừa số nguyên tố lớn nhất của n:
+def TSNTMax(n):
+	res = -1
+	for i in range(2, isqrt(n) + 1):
+		if n % i == 0:
+			res = i
+		while n % i == 0:
+			n //= i
+	if n > 1:
+		res = n
+	return res
+#Kiểm tra n có tồn tại ít nhất 1 số 6:
+def Check6(n):
+	while n != 0:
+		if n % 10 == 6:
+			return 1
+		n //= 10
+	return 10
+
+#Kiểm tra tổng chữ số của n chia hết cho 8:
+def SumDiv8(n):
+	s = SumChuSo(n)
+	return s % 8 == 0
+
+#Tính giai thừa của các chữ số:
+def GiaiThua(n):
+	res = 0
+	while n != 0:
+		res += factorial(n % 10)
+		n //= 10
+	return res
+
+# Kiểm tra xem có phải n chỉ được tạo từ 1 số hay không:
+def Check1Num(n):
+	test = n % 10
+	while n != 0:
+		if n % 10 != test:
+			return False
+		n //= 10
+	return True
+
+# Kiểm tra chữ số tận cùng lớn nhất:
+def CheckMaxDV(n):
+	dv = n % 10
+	while n != 0:
+		if n % 10 > dv:
+			return False
+		n //= 10
+	return True
+
+#In ra tổng lũy thừa của các chữ số của n với số mũ là số chữ số:
+def SoChuSo(n):
+	cnt = 0
+	while n != 0:
+		cnt += 1
+		n //= 10
+	return cnt
+def SumLT(n):
+	sm = SoChuSo(n)
+	s = 0
+	while n != 0:
+		s += (n % 10)**sm 
+		n //= 10
+	return s
+
+if __name__ == '__main__':
+	while True:
+		n = int(input("Nhap so n tu ban phim: "))
+		if n == 0: break
+		if CheckSNT(n):
+			print(n, "la so nguyen to")
+		else:
+			print(n, "khong phai so nguyen to")
+
+		print("Tong cac chu so cua", n, "la:", SumChuSo(n))
+
+		print("Tong chu so chan cua", n, "la:", SumChuSoChan(n))
+
+		print("Tong chu so nguyen to cua", n, "la:", SumChuSoNT(n))
+
+		print("So nguoc cua", n, "la:", SoNguoc(n))
+
+		if Check6(n):
+			print(n, "co chu so 6")
+		else:
+			print(n, "khong co chu so 6")
+
+		if SumDiv8(n):
+			print("Tong cac chu so cua", n, "chia het cho 8")
+		else:
+			print("Tong cac chu so cua", n, "khong chia het cho 8")
+
+		print("Giai thua cua", n, "la:", GiaiThua(n))
+
+		if Check1Num(n):
+			print(n, "duoc tao tu mot so")
+		else:
+			print(n, "khong duoc tao tu mot so")
+
+		if CheckMaxDV(n):
+			print("Chu so hang don vi la lon nhat")
+		else:
+			print("Chu so hang don vi khong phai so lon nhat")
+
+		print("Tong luy thua cua cac chu so cua", n, "la:", SumLT(n))
+
+**** Viết document cho hàm bằng cách gho chú thích nhiều dòng bên dưới khi viết tên hàm.
+	- Ví dụ:
+		def Yeu():
+			'''Xin chao tat ca cac ban
+			Minh la Pham Anh Kiet
+			Minh rat thich mot nguoi con gai
+			Do chinh la Phan Thi Kim Loan
+			Loan anh yeu em nhieu lam
+			'''
+			print("I love you")
+	- Dùng hàm help() để xem documents của hàm.
+**** Biến Global variable:
+	- Biến trong hàm sẽ mất khi kết thúc hàm.
+	- Hoặc sử dụng biến global.
+	- Ví dụ:
+		x = 10
+		def XX():
+			global x
+			x = 23
+			x += 1
+			print(x)
+		XX()
+		print(x)
+**** Parameter mặc định: đã hoàn thành.
+**** Lambda Expression: 
+	- Cú pháp : lambda parameterlist : expression (biểu thức đơn, không nhập complex)
+	- Ví dụ:
+	def handle(f, x):
+		retrun f(x)
+	res = handel(lambda x : x % 2 == 0, 7)
+	def handle(f, x, y):
+		return f(x, y)
+	sum = handle(lambda x, y : x + y, 7, 9)
+	- Ví dụ tổng quát:
+	def handle(f, x):
+		return f(x)
+	def SoChan(x):
+		return x % 2 == 0
+	res1 = handle(lambda x : x + 3, 7)
+	print(res1)
+	res2 = handle(SoChan, 6)
+	print(res2)
+	res3 = handle(lambda x : SoChan(x), 7)
+	print(res3)

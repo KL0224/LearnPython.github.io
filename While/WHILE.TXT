@@ -1,0 +1,26 @@
+======================WHILE====================
+1. while: dùng khi chưa biết số lần lặp.
+a) Cú pháp: 
+while condition:
+	#code
+else: # có thể có hoặc không
+	#code
+b) Lệnh break
+c) Lệnh continue
+d) Code:
+a = 10
+b = 20
+while a <= b:
+	if a % 2 == 0:
+		print(a, end =" ")
+		break
+	a += 1
+else:
+	print("END")
+a = 18264914
+n = 0
+while a > 0:
+	n = n*10 + a % 10
+	a //= 10
+print("So chu so la:", n)
+

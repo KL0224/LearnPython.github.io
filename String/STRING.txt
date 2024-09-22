@@ -1,0 +1,121 @@
+===========================STRING======================
+1. Cách viết chuỗi:
+a. Viết trên một dòng dùng: '...' hoặc "..."
+b. Viết trên nhiều dòng dùng: '''...''' hoặc """..."""
+c. Ví dụ:
+s = """Hello cac anh em nha 
+mình la pham anh kiet
+la ny cua Kim Loan"""
+print(s)
+
+2. Một số hàm trong string:
+a. Cú pháp : Object.name(parameter)
+b. Hàm upper() và lower() : In hoa và in thường
+	+ Ví dụ:
+		s1 = "PHAM ANH KIET"
+		s2 = 'phan thi kim loan'
+		s3 = 'NGu ngoc qua'
+		print(s1.lower())
+		print(s2.upper())
+		print(s3.upper())
+		print(s3.lower())
+c. Hàm rjust(), ljust(), center() : căn phải, trái, giữa
+	+ Hàm rjust(ds1, ds2): nếu truyển vào 1 đối số thì python sẽ chèn khoảng trắng nếu thì đối số thứ 2 thì chèn nó vào trước.
+	- Ví dụ:
+		s = "HELLO"
+		print(s.rjust(10, '/'))
+		print(s.rjust(10))
+		print(s.rjust(4))
+		=========================
+		/////HELLO
+     		 HELLO
+		HELLO
+	+ Hàm ljust(ds1, ds2) : nếu không truyền vào đối số thì python sẽ chèn khoảng trắng và nếu có đối số thứ 2 thì sẽ chèn đối số đó vào sau.
+	- Ví dụ:
+		s = "HELLO"
+		print(s.ljust(10, '/'))
+		print(s.ljust(10))
+		print(s.ljust(4))
+		=========================
+		HELLO/////
+		HELLO
+		HELLO
+	+ Hàm center(ds1, ds2): nó tự đẩy khoảng trắng 2 bên sao cho tổng ký tự bằng giá trị tuyền vào, nếu không có đối số 2 thì sẽ được thay thế bởi dấu sao.
+	- Ví dụ:
+		s = "HELLO"
+		print(s.center(10, '/'))
+		print(s.center(10))
+		print(s.center(4))
+		========================
+		//HELLO///
+		  HELLO
+		HELLO
+	+ Hàm len("chuoi") hoặc hàm chuoi.__len()__ : độ dài của sâu
+	- Ví dụ:
+		s = "Hello ca nha"
+		print(len(s))
+		print(s.__len__())
+	+ Hàm strip(ds) : xóa kí tự bên trái và bên phải của chuỗi, nếu không có đối số thì xóa khoảng trắng.
+	- Ví dụ:
+		s = "   ***Hello   anh em* **  "
+		print(s)
+		print(s.strip())
+		s1 = "***KIET(&****"
+		print(s1.strip('*')) 
+	+ Hàm startswith("str") : Kiểm tra xem một chuỗi có bắt đầu bằng một chuỗi con hay không.
+	+ Hàm endswith("str") : Kiểm tra xem một chuỗi có kết thúc bằng một chuỗi con hay không.
+	- Ví dụ:
+		s = "C:\\Users\\ASUS\\Desktop\\_\\Python-28tech\\Operator.txt"
+		print(s.startswith('C'))
+		print(s.endswith("txt"))
+	+ Hàm find() : trả về vị trí đầu tiên tìm thấy, hàm rfind() : trả về vị trí cuối cùng tìm thấy, nếu không tìm thấy thì trả về -1
+	- Ví dụ:
+		s = "Hello anh em nha"
+		print(s.find("o"))
+		print(s.rfind("a"))
+		print(s.find("i"))
+		print(s.count("a"))
+		print(s.count("i"))
+		print(s.count("a", 10))
+		print(s.count("a", 10, 13))
+	+ Hàm format(): "".format(ds)
+	- Ví dụ:
+		print("Hello {0}, Toi nam nay {1} tuoi".format("Kiet", 19))
+	+ Substring : cắt chuỗi từ vị trí chỉ định đầu đến trước vị trí cuối.
+	- Ví dụ:
+		s = "Pham Anh Kiet"
+		print(s[:]) # Pham Anh Kiet
+		print(s[:6]) # Pham A
+		print(s[6:]) # nh Kiet
+		print(s[:-1]) # Pham Anh Kie
+		print(s[-5:]) #  Kiet
+		print(s[3:-3]) # m Anh K
+		print(s[1:4]) # ham
+	+ Hàm nối chuỗi : hàm join(ds) : nối phần tử thông qua 1 kí tự.
+	- Ví dụ:
+		s = "Pham Anh Kiet,19,DHCNTT,10M"
+		arr = s.split(',')
+		print(len(arr))
+		for i in arr:
+			print(i)
+		ss = '\t'
+		ss = ss.join(arr)
+		print(ss)
+
+		a = "Java"
+		b = "C++"
+		c = a + ' ' + b
+		print(c)
+	+ Hàm tách chuỗi: hàm split(ds)
+	- Ví dụ:
+		s = "Pham Anh Kiet,19,DHCNTT,10M"
+		arr = s.split(',')
+		for i in arr:
+			print(i)
+
+		a = """Java
+		Python
+		C++"""
+		arr = a.splitlines()
+		for i in arr:
+			print(i)

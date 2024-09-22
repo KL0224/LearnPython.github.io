@@ -1,0 +1,12 @@
+Print:
+1. Cú pháp : print(object, sep = seperator, end = end)
+2. Các tham số của print:
+    * object : Các đối tượng trong python.
+    * sep : phân cách giữa các đối tượng khi in, nếu không có tham số nay thì mặt định sẽ có dấu cách.
+    * end : chỉ ra kí tự được in cuối cùng của dòng, nêu không có tham số này mặc định sẽ là dấu xuống dòng.
+3. Nháy đơn hoặc kép.
+4. Code:
+print("pham", "anh", "kiet")
+print("02", "08", "2005", sep='-')
+print("****anh", "yeu", "em", end='!!!! ')
+print(" kim", "loan", end='****')

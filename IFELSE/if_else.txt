@@ -1,0 +1,43 @@
+I. Câu lệnh if: 
+1. Cú pháp : 
+if condition:
+	#code
+2. Phép nối: and hay or
+
+II. Câu lệnh if else:
+1. Cú pháp:
+if condition:
+	#code
+else:
+	#code
+
+III. Câu lệnh if...elif...else:
+if condition:
+	#code
+elif condition:
+	#code
+else:
+	#code
+IV. Shorthand if và toán tử ba ngôi:
+1. Shorthand if : viết code trên một dòng.
+if(a >= b) : print(a, "lon hon", b, end = " "); print("hoac", a "bang", b)
+2. Toán tử ba ngôi:
+*Cú pháp: variable = statement if condition else statement
+a, b = map(int, input("Moi nhap a va b: ").split())
+ans = "a > b" if a > b else "a <= b"
+print(ans)
+V. nested if (if lồng nhau):
+==> quá đơn giản.
+VI. Lưu ý: chưa biết đúng hay sai
+Trong if chỉ toàn and hoặc or, chứ không có lồng nhau.
+VI.
+Ví dụ tổng hợp:
+n = int(input("Moi nhap so n: "))
+if n % 10 == 0:
+	print(n, "chia het cho 10.")
+elif n % 5 == 0:
+	print(n, "chia het cho 5.")
+else:
+	print(n, "khong chia het cho 10 va 5.")
+
+4602215009883

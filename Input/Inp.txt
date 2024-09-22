@@ -1,0 +1,22 @@
+1. Nhập dữ liệu với input :
+	+ Cú pháp : input(prompt)
+	+ Giá trị trả về : xâu kí tự => Ép kiểu.
+	+ Nhập nhiều số:
+		- Bước 1: nhập các số.
+		- Bước 2: tách các chuỗi số riêng biệt bằng hàm split.
+		- Bước 3: ép cả 3 chuổi này thành kiểu dữ liệu mong muốn bằng map.
+2. Code:
+s = int(input("Chao mung ban den voi python, nhap di: "))
+print(s, ":", type(s))
+
+q = input("Nhap 3 so: ")
+p = q.split()
+a, b, c = map(int , p)
+print(a, ":", type(a))
+print(b, ":", type(b))
+print(c, ":", type(c))
+print(a + b + c)
+
+x, y, z, t = map(float, input().split())
+print(x + y + z + t)
+

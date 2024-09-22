@@ -1,0 +1,31 @@
+1. Toán tử gán : Assignment operator.
+	+ Cú pháp : a = b
+	+ Gán giá trị b cho a.
+	+ Hoán vị a và b : a, b = b, a
+2. Toán tử toán học : Arithmetic operator
+	+
+	-
+	*
+	/
+	// : Chia nguyên
+	% : Chia dư
+	** : lũy thừa
+3. Toán tử so sánh : Comparsion operator
+	* Trả về True, False
+	==
+	> 
+	>=
+	<
+	<=
+	!=
+4. Toán tử logic : Logical operator
+	and 
+	or 
+	not
+5. Toán tử nhận dạng (Indentity operator) : xem 2 đối tượng có phải là một hay không : 
+	is 
+	is not
+6. Toán tử thành viên (Membership operator) : xem một phần có nằm trong phần còn lại hay không :
+	in
+	not in
+

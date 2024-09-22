@@ -1,0 +1,76 @@
+1. Một số hàm toán học cơ bản:
+	+ thư viện: math
+		- khai báo : import math
+		- Hiển thị các hàm của thư viện dùng : print(help(math)).
+		- nếu không muốn dùng tiền tố math thì ta khai báo thư viện như sau: from math import *
+		- sqrt() (square soot) : căn bậc 2 - trả về số thực.
+			+ ví dụ : print(math.sqrt(4)) ==> 2.0
+		- isqrt() (integer square root) : căn bậc 2 - trả về số nguyên.
+			+ ví dụ : print(isqrt(35)) ==> 5
+		- pow() (power) : lũy thừa - trả về float.
+			+ ví dụ : print(pow(2, 3))
+			+ tính được các căn bậc 2, 3 ... : print(pow(2, 1/3))
+		- ceil() : (ceiling) : làm tròn lên số nguyên.
+			+ ví dụ : print(ceil(2.3)) ==> 3
+		- floor() : (floor) : làm tròn xuống số nguyên.
+			+ ví dụ : print(floor(3.44444)) ==> 3
+		- factorial() : giai thừa
+			+ ví dụ : print(factorial(100)) ==> 3628800
+		- gcd() :greatest common divisor : tính ước chung lớn nhất.
+			+ ví dụ : print(gcd(6, 12)) ==> 6
+		- comb(n, k) : tính tổ hợp chập k của n.
+			+ ví dụ : print(comb(3, 2)) ==> 3
+		- perm(n) : tính hoán vị n phần tử.
+			+ ví dụ : print(perm(5)) => 120
+		- perm(n, k) : tính chỉnh hợp chập k của n phần tử.
+			+ ví dụ : print(perm(5, 3)) => 60
+		- radians() : chuyển từ độ sang radian
+		- sin(radian), cos(radian), tan(randian):
+			+ Ví dụ:
+				n = float(input("Mời nhập độ: "))
+				sinx = sin(radians(n))
+				cosx = cos(radians(n))
+				tanx = tan(radians(n))
+				print("sin({0}) = {1}".format(n, sinx))
+				print("cos({0}) = {1}".format(n, cosx))
+				print("tan({0}) = {1}".format(n, tanx))
+	**** build-in function (không thuộc math nhưng có thể dùng thoải mái) ********
+		- fabs() : trị tuyệt đối của số thực.
+			+ ví dụ : fabs(-14) ==> 14
+		- abs : trị tuyệt đối của số nguyên hoặc số thực
+			+ ví dụ : abs(-10) ==> 10 hoặc abs(-5.4) ==> 5.4
+		- round() : làm tròn số.
+			+ ví dụ : round(20.342) ==> 20 hoặc round(20.533) ==> 21
+		- round(số góc, đơn vị làm tròn) L
+			+ Ví dụ : round(20.342, 2) ==> 20.34
+		- max(...) : tìm max trong một dãy số.
+		- min(...) : tìm min trong dãy số.
+		- sum([...]) : tìm sum của một list.
+		
+	**** Thư viện time
+		- Hàm time(): trả về số giây thời gian thực. Nếu muốn tính số giây thực thi của một đoạn chương trình thì hãy chặn 2 đầu của đoạn chương trình bằng 2 clock rồi trừ 2 clock này với nhau
+			+ Ví dụ:
+				from time import *
+				start = time()
+				n = int(input())
+				end = time()
+				print(end - start)
+		- Hàm sleep(khoảng thời gian): tạm dừng quá trình chạy trong một khoảng thời gian.
+			+ Ví dụ:
+				for i in range(10):
+					print(i)
+					sleep(1)
+	****Thư viện random:
+		- randrange(x, y) : xuất số ngẫu nhiên từ >= x and < y
+			+ Ví dụ:
+				from random import randrange
+				for _ in range(10):
+					print(randrange(0, 10))
+	****Hàm exit() : thoát khỏi chương trình
+	****Hàm eval("Biểu thức") : tính toán một chuỗi
+		+ Ví dụ:
+			x1, x2, x3 = eval(input("Nhap x1, x2, x3: "))
+			x = eval("x1**x2  + x3 // x2 + x1")
+			print(x)
+			==> Nhap x1, x2, x3: 1, 2, 3
+				3

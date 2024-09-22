@@ -1,0 +1,88 @@
+Variable: 
+1. vùng chứa dữ liệu
+2. không cần khai báo kiểu dữ liệu khi khai báo biến.
+3. Dùng type để check kiểu dữ liệu.
+4. Đặt tiên:
+	* không đặt tên biến có dấu cách.
+	* không được bắt đầu bằng chữ số.
+	* không chứa kí tự đặt biệt.
+5. Phân biệt chữ hoa và chữ thường.
+DataType:
+1. Kiểu dữ liệu số:
+	* int : 0, 10, 20 : không giới hạn giá trị.
+		+ có thể gán giá trị cho nó theo hệ cơ số:
+			- "0b" hoặc "0B" : hệ nhị phân(Binary) - cơ số(Base) 2.
+			- "0o" hoặc "0O" : hệ bát phân(Octal) - cơ số 8.
+			- "0x" hoặc "0X" : hệ 16 (Hexadecimal). 
+	* float : 5.0 , 10.3 , 20.4 : 
+		+ lưu lớn nhất : 1.8*10^308, lớn hơn nó sẽ là inf
+		+ lưu nhỏ nhất : 5.0*10^-324, nhỏ hơn sẽ là 0
+		+ sai số : in số thực với số lượng chữ số sau số phẩy xác định
+			# in 2 số sau dấu phẩy
+			- print('%.2f' % 2)
+			- print('{:.2f}'.format(a))
+	* complex : 2 + 3j, -2j
+		+ Thực : real.
+		+ Ảo : imag.
+2. Kiểu dữ liệu : bool
+	* Hai giá trị đúng sai.
+	* Các giá trị đúng trong python : xâu không rỗng, số khác 0.
+3. Xâu kí tự : str
+	* Chuỗi kí tự được đặt giữa dấu nháy đơn hoặc kép.
+	* Xâu kí tự nhiều dòng : '''...''' hoặc """..."""
+4. Ép kiểu : int(), float(), str()...
+5 Code:
+# Biến số thực
+a = 10.4412649164
+print(a, ":", type(a))
+print('%.2f' % a)
+print('{:.4f}'.format(a))
+g = 10e5
+print(g, ":", type(g))
+h = 1.9e309
+print(h, ":", type(h))
+j = 10e-400
+print(j, ":", type(j))
+
+# Biến số nguyên
+b = 104141740170740170170710570157050917501759715907510
+print(b, ":", type(b))
+d = 0b101
+print(d, ":", type(d))
+e = 0o231
+print(e, ":", type(e))
+f = 0x59
+print(f, ":", type(f))
+
+#Biến số phức
+c = -1 + 2j 
+print(c, ":", type(c))
+print("Real:", c.real)
+print("Image:", c.imag)
+
+# Biến bool
+l = True
+print(l, ":", type(l))
+q = ""
+print(bool(q))
+
+# Biến str
+w = "Hello anh em nha"
+print(w, ":", type(w))
+r = """anh em
+oi tao la
+pham anh kiet"""
+print(r, ":", type(r))
+
+# Ép kiểu
+t = '123'
+ti = float(t)
+print(ti, ":", type(ti))
+y = 230009
+ys = str(y)
+print(ys, ":", type(ys))
+u = False
+uf = float(u)
+print(uf, ":", type(uf))
+
+

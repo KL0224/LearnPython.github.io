@@ -1,0 +1,253 @@
+=============================LIST===========================
+1. Tính chất của list:
+	* List are ordered.
+	* Accessed by index.
+	* Lists can contain any sort of object.
+	* Lists are changeable.
+2. Tạo list:
+a = [1, 2.4, "Hello"]
+print(a)
+print(type(a))
+b = []
+print(b)
+print(type(b))
+3. List constructor: theo iterable
+s = "Kiet yeu Loan"
+a = list(s)
+print(a)
+==> ['K', 'i', 'e', 't', ' ', 'y', 'e', 'u', ' ', 'L', 'o', 'a', 'n']
+4. Hàm len():
+a = [1, 2.4, "Hello"]
+print(len(a))
+5. Truy cập phần tử thông qua chỉ số: chỉ số có cả âm và dương.
+	* Chỉ số dương từ trái qua phải bắt đầu từ 0
+	* Chỉ số âm từ phải qua trái bắt đầu từ -1
+6. Duyệt mảng: a = [1, 2, 3, 4, 5]
+	* Thông qua chỉ số:
+	for i in range(0, len(a)):
+		print(a[i], end = ' ')
+	print()
+	for i in range(len(a) - 1, -1, -1):
+		print(a[i], end = ' ')
+	print()
+	* For each:
+		for i in a:
+			print(i, end = ' ')
+7. Thay đổi giá trị của phần tử thông qua chữ số:
+	a = [1, 2, 3, 4, 5]
+	a[1] = 20
+	a[2] = 30
+	a[-1] = 50
+	print(a)
+8. Thêm một phần từ vào list:
+	* Thêm vào cuối: hàm append()
+	a = [1, 2, 3, 4, 5]
+	a. append(6)
+	* Thêm vào một vị trí bất kì: hàm insert()
+	a = [1, 2, 3, 4, 5]
+	a.insert(3, -5)
+	a.insert(10, 10)
+9. Xóa phần tử:
+	* Xóa phần tử thông qua chỉ số và có thể trả về giá trị đã xóa: hàm pop(index).
+		- Nếu không có chỉ số sẽ xóa vị trí cuối cùng.
+	a = [1, 2, 3, 4, 5]
+	a. pop(2)
+	a.pop()
+	* Xóa phần tử không cần trả về: hàm del a[index]
+	a = [1, 2, 3, 4, 5]
+	del a[2]
+	print(a)
+	* Xóa thông qua giá trị: remove(value) và nếu list có nhiều giá trị giống nhau thì nó chỉ xóa thằng đầu tiên thôi. Nếu giá trị không có thì sẽ báo lỗi.
+	a = [1, 2, 3, 2, 4, 5]
+	a.remove(2)
+	* Xóa mọi phần tử trong list: clear()
+	a = [1, 2, 3, 2, 4, 5]
+	a.clear()
+10. Sao chép list:
+	a = [1, 2, 3, 2, 4, 5]
+	b = a * 2
+	c = a
+	d = [1] * 10
+11. Tìm kiếm trong list: tìm kiếm tuyến tính
+	a = [1, 2, 3, 2, 4, 5]
+	if 2 in a:
+		print("FOUND")
+12. Combine list (Nối list):
+	a = [1, 2, 3, 2, 4, 5]
+	b = [10, 11, 12]
+	a.extend(b)
+	a.extend([1000])
+	a += b
+13. Các phương thức của list:
+	* Hàm copy(): tạo một bản sao của list ban đầu
+	a = [1, 2, 3]
+	b = a
+	print(a is b)
+	c= a.copy()
+	print(c)
+	print(c == a)
+	print(c is a)
+	* Hàm count(value) : trả về số lần xuất hiện cả một phần tử 
+	a = [1, 2, 3, 1]
+	a.count(1) ==> 2
+	* Hàm index(value) : trả về chỉ số đầu tiên có value
+	a = [1, 2, 3, 1]
+	a.count(3) ==> 2
+	* Hàm reverse() : lật ngược (O(n))
+	a = [1, 2, 3]
+	a.reverse()
+	* Hàm sort() : sắp xếp tăng dần (O(nlogn)) # Tim sort
+	* Hàm all() : trả về True nếu mọi phần tử trong list đều là True
+	* Hàm any() : trả về True nếu có ít nhất một phần tử trong list là True.
+	* Hàm max()
+	* Hàm min()
+	* Hàm sorted() : trả về một list được sắp xếp từ list ban đầu
+	* Hàm sum()
+
+============================================
+UNICA:
+1. Khai báo list:
+l = [1, 2, 4, "Hacker", 2 + 3j]
+ls = [0]*10
+print(l[0])
+print(l)
+print(len(l))
+for i in ls:
+    print(i, end = ' ')
+2. Cách duyệt list: lst = [1, 2.2, "Kiet", 3 + 3j]
+	a. Duyệt collection:
+	for x in lst:
+    	print(x, end = ' ')
+    b. Duyệt theo index:
+    for i in range(len(lst)):
+	    print(lst[i], end = ' ')
+	for i in range(len(lst) - 1, -1, -1):
+	    print(lst[i], end = ' ')
+3. Cách gán cho phần tử:
+lst = [1, 2.2, "Kiet", 3 + 3j]
+print(lst)
+lst[0] *= 10
+lst[1] *= 10
+lst[2] *= 2
+lst[3] *= 2
+print(lst)
+
+a = [1, 2, 3, 4]
+b = [1, 2, 3, 4]
+==> a và b là 2 vùng nhớ khác nhau.
+
+a = [1, 2, 3, 4]
+b = a
+=> a và b cùng 1 vùng nhớ.
+
+4. insert(vt, value):
+lst = [1, 2.2, "Kiet", 3 + 3j]
+print(lst)
+lst.insert(2, "Hello")
+print(lst)
+lst.insert(0, 10)
+print(lst)
+
+5. Phương thức append(value) : chèn vào cuối danh sách
+lst = [1, 2.2, "Kiet", 3 + 3j]
+lst.append("Tail")
+print(lst)
+
+6. Phương thức remove(value) : xóa phần tử đầu tiên tìm thấy
+lst = [1, 2.2, "Kiet", 3 + 3j, "Kiet"]
+lst.remove("Kiet")
+print(lst)
+
+7. Phương thức del :
+lst = [1, 2.2, "Kiet", 3 + 3j, "Kiet"]
+del lst[0]
+print(lst)
+del lst[:2]
+print(lst)
+del lst[0], lst[0]
+print(lst)
+
+8. Hàm reverse() : đảo ngược list hoàn toàn.
+lst = [1, 2.2, "Kiet", 3 + 3j, "Kiet"]
+lst.reverse()
+
+9. Hàm reversed(list) : đảo ngược list nhưng không thay đổi 
+lst = [1, 2.2, "Kiet", 3 + 3j, "Kiet"]
+ls = reversed(lst)
+for i in ls:
+	print(i, end = ' ')
+
+10. Hàm sort(): sắp xếp hoàn toàn list
+a = [1, 3, 10, 2, 4, 5, 2]
+print(a)
+a.sort()
+print(a)
+
+a = ["C++", "Java", "Python", "Ruby"]
+a.sort(reverse = True) # giảm dần
+print(a)
+
+11. Hàm sorted(list): sắp xếp nhưng không thay đổi ban đầu
+a = [1, 3, 10, 2, 4, 5, 2]
+b = sorted(a)
+print(a)
+for i in b:
+    print(i, end = " ")
+
+12. Trích lọc list : Slicing
+a. Cú pháp : list[begin : end : step]
+	* list là danh sách 
+	* begin: là vị trí bắt đầu cắt
+	* end : là vị trí sau vị trí cắt
+	* step : bước nhảy
+b. Ví dụ:
+	a = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+	print(a)
+	print(a[0:3])
+	print(a[2 : 10])
+	print(a[-4:-2])
+	print(a[:])
+	print(a[:10])
+	print(a[2:])
+	print(a[::2])
+	print(a[2:8:2])
+
+13. List đa chiều:
+M = [
+        [1, 2, 3, 4],
+        [5, 6, 7, 8],
+        [9, 10, 11, 12],
+        [13, 14, 15, 16],
+        [17, 18, 19, 20]
+]
+
+for row in M: # Duyet tung dong
+    for colum in row: # Duyet phan tu từng dòng
+        print(colum, end = ' ')
+    print()
+
+*** Khởi tạo list đa chiều:
+row = 5
+colum = 4
+lst = [[0]*colum]* row # 5 dong 4 cot
+print(lst)
+
+arr = []
+row = 3
+colum = 2
+
+for i in range(row):
+    a = []
+    for j in range(colum):
+        a.append(int(input()))
+    arr.append(a)
+
+for i in range(len(arr)):
+    for j in range(len(arr[i])):
+        print(arr[i][j], end = " ")
+    print()
+
+for row in arr:
+    for colum in row:
+        print(colum, end = " ")
+    print()
